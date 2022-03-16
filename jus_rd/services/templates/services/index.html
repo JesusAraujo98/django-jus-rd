@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>JUS-CORPORATIVA</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+
+  {% load static %}
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'services/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'services/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'services/lib/animate-css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'services/lib/animate-css/animate.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'services/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <!--==========================
+  Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+          <img class="" src="{% static 'services/img/asd.jpeg' %}" alt="">
+        </div>
+        <h2>Servicios juridícos con <span class="rotating">integridad, profesionalismo, responsabilidad </span></h2>
+        <div class="actions">
+          <a href="#services" class="btn-get-started">Servicios</a>
+          <a href="#contact" class="btn-services">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--==========================
+  Sección de encabezado
+  ============================-->
+  <header id="header">
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li class="menu-active"><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li class="menu-has-children"><a href="#services">Servicios</a>
+          <ul>
+            <li><a href="services.html#laboral">Laboral</a></li>
+            <li><a href="services.html#civil">Civil</a></li>
+            <li><a href="services.html#mercantil">Mercantil</a></li>
+            <li><a href="services.html#penal">Penal</a></li>
+            <li><a href="services.html#propiedad-intelectual">Propiedad Intelectual</a></li>
+            <li><a href="services.html#corporativo">Corporativo</a></li>
+            <li><a href="services.html#familiar">Familiar</a></li>
+            <li><a href="services.html#administrativo">Administrativo</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+  <!--==========================
+  About Section
+  ============================-->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Nosotros</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Jus Corporativa, es un estudio jurídico con atención a personas morales y
+            físicas en el Estado de Nuevo León, México. Se integra por un equipo de Abogadas, capacitadas para brindar
+            asesoría y representación legal.
+          </p>
+          <p class="section-description">
+            Realizamos estudios legales completos; cada asunto es tratado con atención personalizada y discreción,
+            nuestro mayor compromiso es brindar soluciones reales y efectivas, protegiendo sus intereses conforme a
+            derecho. Tenemos la visión de ser un estudio legal caracterizado por el profesionalismo y la eficiencia.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-6 col-md-push-6 about-content">
+          <h2 class="about-title">Filosofía de trabajo.</h2>
+
+          <h4 class="about-second-title">Análisis</h4>
+          <p class="about-text">
+            Ante la situación que enfrentamos, nos permite realizar una introspección y poder arribar a distintos puntos
+            de vista.
+            De este modo, podemos garantizar el éxito mediante el esfuerzo y la aplicación de la razón y deducción.
+          </p>
+          <h4 class="about-second-title">Estrategia</h4>
+          <p class="about-text">
+            Su importancia radica en su vinculación con los resultados, por lo que nos concentramos en cada una de las
+            fortalezas del análisis a detalle que previamente se realiza, para que las acciones estén debidamente
+            coordinadas y así obtener los resultados esperados.
+          </p>
+          <p class="about-text">
+            Una estrategia está enfocada en la obtención de beneficios.</p>
+          <h4 class="about-second-title">Compromiso ético
+          </h4>
+          <p class="about-text">
+            Tenemos un compromiso ético y valores que orientan nuestras acciones, de tal manera que garantizamos
+            integridad en nuestros servicios.
+
+            Como estudio legal, atendemos cada petición con honestidad y diligencia; perpetuamente conforme a derecho.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--==========================
+  Services Section
+  ============================-->
+  <section id="services">
+    <div class="container wow fadeInUp">
+      <div class="gallery">
+        <div class="text-center">
+          <h3 class="section-title">Servicios</h3>
+          <div class="section-title-divider"></div>
+          
+          <p> Sit at amet clita ipsum ipsum sadipscing dolores, amet kasd et magna et sit eirmod,.</p>
+        </div>
+
+        <div class="container">
+
+         {% for service in service_type_list %}
+
+              <div class="col-md-4">
+                <figure class="effect-marley">
+                  <img src="{{ service.type_image.url }}" alt="" class="img-responsive" />
+                  <figcaption>
+                    <h4 class="service-title">{{ service.type_name }}</h4>
+                    <p> {{ service.type_description }} <br><a href="services.html#laboral"><i>ver mas...</i></a></p>
+                  </figcaption>
+                </figure>
+              </div>
+            
+          {% endfor %}
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+  <!--==========================
+  Contact Section
+  ============================-->
+  <section id="contact">
+    <div class="container wow fadeInUp">
+      <h3 class="section-title">Contacto</h3>
+      <div class="section-title-divider"></div>
+
+      {% comment %} <div class="container">
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img
+                  src="/img/code_128.png?raw=true">
+                <h3>Code</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis
+                  provident at.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img
+                  src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                <h3>Code</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis
+                  provident at.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="face face1">
+                <div class="content">
+                  <img
+                    src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                  <h3>Code</h3>
+                </div>
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis
+                    provident at.</p>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    
+    
+      </div> {% endcomment %}
+    <div class="container contact-container wow fadeInUp">
+    </div>
+  </section>
+
+  <!--==========================
+  Footer
+============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>2022, JUS Abogados.
+          </p>
+          <p style="text-align:right">   <em>made by: Jesus Araujo</em></p>
+    
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="{% static 'services/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'services/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'services/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'services/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'services/lib/morphext/morphext.min.js' %}"></script>
+  <script src="{% static 'services/lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'services/lib/stickyjs/sticky.js' %}"></script>
+  <script src="{% static 'services/lib/easing/easing.js' %}"></script>
+
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="{% static 'services/js/custom.js' %}"></script>
+
+  {% comment %} <script src="contactform/contactform.js"></script> {% endcomment %}
+
+
+</body>
+
+</html>
